@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: foo
-        uses: vuillaut/composite-action@v1.4
+        uses: vuillaut/composite-action@v1.5
         with:
           output_dir: 'BUILD'
           token: ${{ secrets.SANDBOX_ZENODO_TOKEN }}
