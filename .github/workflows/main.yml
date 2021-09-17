@@ -10,5 +10,6 @@ jobs:
         uses: vuillaut/composite-action@v1.3
         with:
           output_dir: 'BUILD'
+
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
