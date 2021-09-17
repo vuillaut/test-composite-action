@@ -12,5 +12,5 @@ jobs:
           output_dir: BUILD
           repository_url: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
           token: ${{ secrets.SANDBOX_ZENODO_TOKEN }}
-          sandox: True
+          sandbox: True
           
