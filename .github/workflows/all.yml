@@ -7,9 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: vuillaut/composite-action@v1.18
+      - uses: vuillaut/composite-action@v1.19
         with:
-          output_dir: BUILD
           repository_url: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
           token: ${{ secrets.SANDBOX_ZENODO_TOKEN }}
           sandbox: True
