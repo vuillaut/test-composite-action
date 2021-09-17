@@ -7,9 +7,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: foo
-        uses: vuillaut/composite-action@v1.3
+        uses: vuillaut/composite-action@v1.4
         with:
           output_dir: 'BUILD'
+          token: ${{ secrets.SANDBOX_ZENODO_TOKEN }}
 
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
