@@ -12,11 +12,17 @@ jobs:
           output_dir: 'BUILD'
           repository_url: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
           
+      - run: |
+          echo "content of BUILD:" 
+          ls BUILD
+          
       - name: upload to OSSR
       - uses: docker://gitlab-registry.in2p3.fr/escape2020/wp3/zenodoci:v1.2
         with:
           entrypoint: upload_new_deposit
           args:  --token ${{ secrets.SANDBOX_ZENODO_TOKEN }} --sandbox True --input-dir 'BUILD'
+          
+      - run: echo "JOB DONE"
       
 
 
