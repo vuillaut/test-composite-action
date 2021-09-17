@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: vuillaut/composite-action@v1.15
+      - uses: vuillaut/composite-action@v1.16
         with:
           output_dir: 'BUILD'
           repository_url: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
