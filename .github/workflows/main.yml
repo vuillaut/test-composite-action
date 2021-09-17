@@ -9,7 +9,7 @@ jobs:
 
       - uses: vuillaut/composite-action@v1.17
         with:
-          output_dir: 'BUILD'
+          output_dir: BUILD
           repository_url: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
           
       - run: |
@@ -20,7 +20,7 @@ jobs:
         uses: docker://gitlab-registry.in2p3.fr/escape2020/wp3/zenodoci:v1.2
         with:
           entrypoint: upload_new_deposit
-          args:  --token ${{ secrets.SANDBOX_ZENODO_TOKEN }} --sandbox True --input-dir 'BUILD'
+          args:  --token ${{ secrets.SANDBOX_ZENODO_TOKEN }} --sandbox True --input-dir BUILD
 
       
 
