@@ -6,8 +6,8 @@ jobs:
     name: A job to upload a new deposit in the OSSR
     steps:
       - uses: actions/checkout@v2
-      - id: setup
-        uses: vuillaut/composite-action@v1.14
+
+      - uses: vuillaut/composite-action@v1.14
         with:
           output_dir: 'BUILD'
           repository_url: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
