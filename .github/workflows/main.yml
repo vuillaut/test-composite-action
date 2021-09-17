@@ -7,8 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: foo
-        uses: vuillaut/composite-action@v1.1
+        uses: vuillaut/composite-action@v1.2
         with:
-          who-to-greet: 'ESCAPE'
+          output_dir: 'BUILD'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
