@@ -3,6 +3,7 @@
     "@type": "SoftwareSourceCode",
     "codeRepository": "https://github.com/vuillaut/test-composite-action",
     "name": "test-composite-action",
+    "version": "0.1",
     "description": "https://github.com/vuillaut/test-composite-action",
     "author": [
         {
