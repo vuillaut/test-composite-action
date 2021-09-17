@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to upload a new deposit in the OSSR
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: vuillaut/composite-action@v1.17
+        with:
+          output_dir: BUILD
+          repository_url: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
+          token: ${{ secrets.SANDBOX_ZENODO_TOKEN }}
+          sandox: True
+          
