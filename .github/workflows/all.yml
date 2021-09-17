@@ -1,9 +1,9 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  ossr_new_entry:
     runs-on: ubuntu-latest
-    name: A job to upload a new deposit in the OSSR
+    name: A job to upload a new record in the OSSR
     steps:
       - uses: actions/checkout@v2
 
