@@ -3,15 +3,21 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to upload a new deposit in the OSSR
     steps:
       - uses: actions/checkout@v2
-      - id: foo
-        uses: vuillaut/composite-action@v1.13
+      - id: setup
+        uses: vuillaut/composite-action@v1.14
         with:
           output_dir: 'BUILD'
-          token: ${{ secrets.SANDBOX_ZENODO_TOKEN }}
           repository_url: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
+          
+      - name: upload to OSSR
+      - uses: docker://gitlab-registry.in2p3.fr/escape2020/wp3/zenodoci:v1.2
+        with:
+          entrypoint: upload_new_deposit
+          args:  --token ${{ secrets.SANDBOX_ZENODO_TOKEN }} --sandbox True --input-dir 'BUILD'
+      
 
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
+
+
