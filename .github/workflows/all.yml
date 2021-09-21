@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: vuillaut/composite-action@v1.22
+      - uses: vuillaut/composite-action@main
         with:
           repository_url: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
           token: ${{ secrets.SANDBOX_ZENODO_TOKEN }}
