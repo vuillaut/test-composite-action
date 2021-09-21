@@ -5,8 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to upload a new record in the OSSR
     steps:
-      - uses: actions/checkout@v2
-
       - uses: vuillaut/composite-action@main
         with:
           repository_url: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
