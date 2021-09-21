@@ -3,7 +3,7 @@
     "@type": "SoftwareSourceCode",
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/vuillaut/test-composite-action",
-    "name": "test-composite-action",
+    "name": "test-composite-action-v2",
     "version": "0.1",
     "description": "https://github.com/vuillaut/test-composite-action",
     "author": [
