@@ -9,7 +9,7 @@ jobs:
 
       - uses: vuillaut/composite-action@main
         with:
-          repository_url: vuillaut/test-composite-action
+          repository_url: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
           token: ${{ secrets.SANDBOX_ZENODO_TOKEN }}
           sandbox: True
           
