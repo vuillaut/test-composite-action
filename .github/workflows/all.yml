@@ -3,7 +3,7 @@ on: [push]
 jobs:
   ossr_new_entry:
     runs-on: ubuntu-latest
-    name: A job to upload a new record in the OSSR
+    name: A job to upload a new record in the OSSR ?
     steps:
       - uses: vuillaut/composite-action@main
         with:
